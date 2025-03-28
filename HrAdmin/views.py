@@ -22,7 +22,7 @@ def doLogin(request):
         password = request.POST.get("password")
 
         auth_data = {
-            "username": email,
+            "email": email,
             "password": password
         }
 
@@ -36,7 +36,7 @@ def doLogin(request):
                 user_data = response.json()
                 request.session['auth_token'] = user_data.get('token')
                 request.session['user_email'] = email
-                return render(request, "HrAdmin/index.html", {'user_data':user_data})
+                return redirect("dashboard")
 
             else:
                 print(f"Error: {response.status_code} - {response.text}")

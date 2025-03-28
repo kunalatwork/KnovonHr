@@ -198,7 +198,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',  # Default backend (can be kept for regular username auth)
 ]
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['127.0.0.8080']
 
 # AUTH_USER_MODEL = 'HrAdmin.User'
 
